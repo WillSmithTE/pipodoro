@@ -1,4 +1,6 @@
-export const getTimes = () => prodTimes
+export const getTimes = () => process.env.NODE_ENV === 'development' ?
+    devTimes : prodTimes
+
 
 const prodTimes = buildTimes([
     25 * 60,

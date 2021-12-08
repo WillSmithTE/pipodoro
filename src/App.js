@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { PlayButton } from "./PlayButton";
 import bongosAlarm from './assets/bongo-djembe-percussion-loop_110bpm_A_major.wav'
@@ -42,14 +42,6 @@ const Timer = ({ isPlaying }) => {
     colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
     onComplete={onComplete}
   >
-    {({ remainingTime }) => {
-      return <TimeDisplay remainingTime={remainingTime} />
-    }}
+    {TimeDisplay}
   </CountdownCircleTimer>
 }
-
-const CircleTimer = ({ duration, onComplete, isPlaying }) => {
-  console.error('here')
-
-}
-
