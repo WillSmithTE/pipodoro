@@ -23,6 +23,7 @@ export const App = () => {
 const Timer = ({ isPlaying }) => {
   const times = getTimes()
   const [timeIndex, setTimeIndex] = useState(0)
+  const [numLoops, setNumLoops] = useState(1)
 
   const alarm = new Audio(bongosAlarm)
 
@@ -30,6 +31,7 @@ const Timer = ({ isPlaying }) => {
     alarm.play()
     if (timeIndex === times.length - 1) {
       setTimeIndex(0)
+      setNumLoops(numLoops + 1)
     } else {
       setTimeIndex(timeIndex + 1)
     }
@@ -42,6 +44,8 @@ const Timer = ({ isPlaying }) => {
     colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
     onComplete={onComplete}
   >
-    {TimeDisplay}
+    {({ remainingTime }) => {
+      return <TimeDisplay remainingTime={remainingTime} numLoops={numLoops} />
+    }}
   </CountdownCircleTimer>
 }
