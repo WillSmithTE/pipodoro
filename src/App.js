@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import CountdownTimer from "./countdown-timer/CountdownTimer";
 import { PlayButton } from "./PlayButton";
-
+import bongosAlarm from './assets/bongo-djembe-percussion-loop_110bpm_A_major.wav'
 import "./styles.css";
+import { TimeDisplay } from "./TimeDisplay";
 import { getTimes } from "./times";
 
 export const App = () => {
@@ -21,56 +21,35 @@ export const App = () => {
 }
 
 const Timer = ({ isPlaying }) => {
-  console.error({ isPlaying })
-  const { workTimeSeconds, breakTimeSeconds } = getTimes();
+  const times = getTimes()
+  const [timeIndex, setTimeIndex] = useState(0)
+
+  const alarm = new Audio(bongosAlarm)
+
+  const onComplete = () => {
+    alarm.play()
+    if (timeIndex === times.length - 1) {
+      setTimeIndex(0)
+    } else {
+      setTimeIndex(timeIndex + 1)
+    }
+  }
+
   return <CountdownCircleTimer
+    key={timeIndex}
     isPlaying={isPlaying}
-    duration={workTimeSeconds}
+    duration={times[timeIndex]}
     colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-    onComplete={() => [false]}
+    onComplete={onComplete}
   >
-    {TimeDisplay}
+    {({ remainingTime }) => {
+      return <TimeDisplay remainingTime={remainingTime} />
+    }}
   </CountdownCircleTimer>
 }
 
+const CircleTimer = ({ duration, onComplete, isPlaying }) => {
+  console.error('here')
 
-const TimeDisplay = ({ remainingTime }) => {
-  const getFormattedTime =function (milliseconds) {
-
-    const totalSeconds = Math.round(milliseconds / 1000);
-
-    const seconds = parseInt((totalSeconds % 60).toString(), 10);
-    const minutes = parseInt((totalSeconds / 60).toString(), 10) % 60;
-    const hours = parseInt((totalSeconds / 3600).toString(), 10);
-
-    const ss = seconds < 10 ? '0' + seconds : seconds;
-    const mm = minutes < 10 ? '0' + minutes : minutes;
-    const hh = hours < 10 ? '0' + hours : hours;
-
-    return hh + ':' + mm + ':' + ss;
 }
 
-  return <div className ="timer-wrapper">
-  <div className='displayTime'>
-      {getFormattedTime(remainingTime*1000)}
-  </div>
-</div>
-  return <CountdownTimer
-    timeLeft={remainingTime * 1000}
-  // completeCallback={this.completed}
-  // tickCallback={this.tick}
-  />
-
-
-  if (remainingTime === 0) {
-    return <div className="timer">Time's up</div>;
-  }
-
-  return (
-    <div className="timer">
-      <div className="text">Remaining</div>
-      <div className="value">{remainingTime}</div>
-      <div className="text">seconds</div>
-    </div>
-  );
-};

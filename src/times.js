@@ -1,19 +1,15 @@
-export const getTimes = () => devTimes
+export const getTimes = () => prodTimes
 
-const prodTimes = buildTimes(
+const prodTimes = buildTimes([
     25 * 60,
     5 * 60,
-)
+])
 
-const devTimes = buildTimes(
-    1 * 60,
-    .2 * 60,
-)
+const devTimes = buildTimes([
+    5, 10, 1, 20
+])
 
-function buildTimes(workTimeSeconds, breakTimeSeconds) {
-    return {
-        workTimeSeconds,
-        breakTimeSeconds
-    }
+function buildTimes(times) {
+    return times
 }
 
