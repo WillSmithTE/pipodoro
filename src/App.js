@@ -5,6 +5,7 @@ import bongosAlarm from './assets/bongo-djembe-percussion-loop_110bpm_A_major.wa
 import "./styles.css";
 import { TimeDisplay } from "./TimeDisplay";
 import { getTimes } from "./times";
+import TodoList from "./todo-list/src/App";
 
 export const App = () => {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -16,6 +17,7 @@ export const App = () => {
         <PlayButton playing={isPlaying} onClick={() => setIsPlaying(!isPlaying)} />
         <Timer isPlaying={isPlaying} />
       </div>
+      <TodoList/>
     </div>
   );
 }
