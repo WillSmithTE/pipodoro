@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/pipodoro/static/css/main.24238935.chunk.css",
-    "main.js": "/pipodoro/static/js/main.703a13eb.chunk.js",
-    "main.js.map": "/pipodoro/static/js/main.703a13eb.chunk.js.map",
-    "runtime-main.js": "/pipodoro/static/js/runtime-main.83b1fe80.js",
-    "runtime-main.js.map": "/pipodoro/static/js/runtime-main.83b1fe80.js.map",
-    "static/js/2.f1017468.chunk.js": "/pipodoro/static/js/2.f1017468.chunk.js",
-    "static/js/2.f1017468.chunk.js.map": "/pipodoro/static/js/2.f1017468.chunk.js.map",
-    "static/js/3.58f95c52.chunk.js": "/pipodoro/static/js/3.58f95c52.chunk.js",
-    "static/js/3.58f95c52.chunk.js.map": "/pipodoro/static/js/3.58f95c52.chunk.js.map",
+    "main.css": "/pipodoro/static/css/main.01309c78.chunk.css",
+    "main.js": "/pipodoro/static/js/main.d0f4f8cc.chunk.js",
+    "main.js.map": "/pipodoro/static/js/main.d0f4f8cc.chunk.js.map",
+    "runtime-main.js": "/pipodoro/static/js/runtime-main.f3f63e9d.js",
+    "runtime-main.js.map": "/pipodoro/static/js/runtime-main.f3f63e9d.js.map",
+    "static/js/2.3bc7bdbe.chunk.js": "/pipodoro/static/js/2.3bc7bdbe.chunk.js",
+    "static/js/2.3bc7bdbe.chunk.js.map": "/pipodoro/static/js/2.3bc7bdbe.chunk.js.map",
+    "static/js/3.274e325a.chunk.js": "/pipodoro/static/js/3.274e325a.chunk.js",
+    "static/js/3.274e325a.chunk.js.map": "/pipodoro/static/js/3.274e325a.chunk.js.map",
     "index.html": "/pipodoro/index.html",
-    "static/css/main.24238935.chunk.css.map": "/pipodoro/static/css/main.24238935.chunk.css.map",
-    "static/js/2.f1017468.chunk.js.LICENSE.txt": "/pipodoro/static/js/2.f1017468.chunk.js.LICENSE.txt",
+    "static/css/main.01309c78.chunk.css.map": "/pipodoro/static/css/main.01309c78.chunk.css.map",
+    "static/js/2.3bc7bdbe.chunk.js.LICENSE.txt": "/pipodoro/static/js/2.3bc7bdbe.chunk.js.LICENSE.txt",
     "static/media/bongo-djembe-percussion-loop_110bpm_A_major.3e7cc99a.wav": "/pipodoro/static/media/bongo-djembe-percussion-loop_110bpm_A_major.3e7cc99a.wav",
     "static/media/orangeplaybutton.91cacfcd.png": "/pipodoro/static/media/orangeplaybutton.91cacfcd.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.83b1fe80.js",
-    "static/js/2.f1017468.chunk.js",
-    "static/css/main.24238935.chunk.css",
-    "static/js/main.703a13eb.chunk.js"
+    "static/js/runtime-main.f3f63e9d.js",
+    "static/js/2.3bc7bdbe.chunk.js",
+    "static/css/main.01309c78.chunk.css",
+    "static/js/main.d0f4f8cc.chunk.js"
   ]
 }
