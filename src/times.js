@@ -8,7 +8,7 @@ const prodTimes = buildTimes([
 ])
 
 const devTimes = buildTimes([
-    5, 10, 1, 20
+    5, 6
 ])
 
 function buildTimes(times) {
